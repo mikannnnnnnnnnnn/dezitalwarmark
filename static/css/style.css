@@ -1,0 +1,19 @@
+@charset "UTF-8";
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+}
+
+/* footer */
+.footer {
+  background-color: #fff;
+  color: #000;
+  padding-top: 50px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 8px;
+}

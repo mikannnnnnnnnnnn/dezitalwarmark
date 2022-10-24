@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electronic Watermark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+      ;;
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <form method="post" action="/send" enctype="multipart/form-data">
+      <input type="file" id="img_file" name="img_file" />
+      <input type="file" id="uimg_file" name="uimg_file" />
+      <input type="submit" value="送信" />
+    </form>
+
+    <p>
+      {% if raw_img_url %}
+      <img src="{{ raw_img_url }}" />
+      {% endif %} {% if raw_uimg_url %}
+      <img src="{{ raw_uimg_url }}" />
+      {% endif %} {% if wate_img_url %}
+      <img src="{{ wate_img_url }}" />
+      {% endif %}
+    </p>
+
+    <form method="post" action="/take" enctype="multipart/form-data">
+      <input type="file" id="pic_file" name="pic_file" />
+      <input type="file" id="upic_file" name="upic_file" />
+      <input type="submit" value="送信" />
+    </form>
+
+    <p>
+      {% if take_img_url %}
+      <img src="{{ take_img_url }}" />
+      {% endif %} {% if take_uimg_url %}
+      <img src="{{ take_uimg_url }}" />
+      {% endif %} {% if ume_img_url %}
+      <img src="{{ ume_img_url }}" />
+      {% endif %}
+    </p>
+
+    <footer class="footer">
+      <p class="footer-copy">
+        <small>&copy;遠藤英彰</small>
+      </p>
+    </footer>
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+      ;
+    ></script>
+    ;
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"
+      ;
+    ></script>
+    ;
+  </body>
+</html>
